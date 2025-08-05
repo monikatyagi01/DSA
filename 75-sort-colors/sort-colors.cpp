@@ -13,9 +13,7 @@ public:
                 }
             }
         }
-        for(auto num: nums)
-        {
-            cout<<num;
-        }
+     
     }
+
 };
