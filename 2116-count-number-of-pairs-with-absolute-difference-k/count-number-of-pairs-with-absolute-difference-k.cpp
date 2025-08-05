@@ -12,7 +12,7 @@ public:
         }*/
         for(int i=0;i<l;i++)
         {
-              for(int j=0;j<l;j++){
+              for(int j=i+1;j<l;j++){
           //  int x=abs(num1-k);
           // if(umap.find(x)!=umap.end()){
             if(abs(nums[i]-nums[j])==k)
@@ -21,6 +21,6 @@ public:
            }
         }
         
-        return count/2;
+        return count;
     }
 };
