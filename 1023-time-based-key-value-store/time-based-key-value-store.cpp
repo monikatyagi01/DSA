@@ -6,15 +6,12 @@ public:
     TimeMap() {
         time_map = {};
     }
-    
     void set(string key, string value, int timestamp) {
         time_map[key].push_back({timestamp, value});
     }
-    
     string get(string key, int timestamp) {
         int n = time_map[key].size();
         int left = 0, right = n-1, mid, index = -1;
-        
         while (left <= right) {
             mid = left + (right - left) / 2;
             if (time_map[key][mid].first <= timestamp) index = mid;
@@ -25,7 +22,6 @@ public:
                 right = mid-1;
             }
         }
-    
         if (index == -1) {
             return "";
         } else {
@@ -34,9 +30,3 @@ public:
     }
 };
 
-/**
- * Your TimeMap object will be instantiated and called as such:
- * TimeMap* obj = new TimeMap();
- * obj->set(key,value,timestamp);
- * string param_2 = obj->get(key,timestamp);
- */
